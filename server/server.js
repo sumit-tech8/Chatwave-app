@@ -22,7 +22,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
-app.use(express.static(path.join(__dirname, './my-app/build')))
+// app.use(express.static(path.join(__dirname, './my-app/build')))
 
 //routes
 app.use('/api/v1/auth', authRoutes);
@@ -60,9 +60,9 @@ app.get('/api/messages', async (req, res) => {
 
 
 //rest api
-app.use('*',function(req,res){
-    res.sendFile(path.join(__dirname,'./my-app/build/index.html'));
-})
+// app.use('*',function(req,res){
+//     res.sendFile(path.join(__dirname,'./my-app/build/index.html'));
+// })
 
 app.get('/',(req,res) => {
     res.send("<h1>Welcome to chat app <h1/>")
