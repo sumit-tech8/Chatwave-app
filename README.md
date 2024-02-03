@@ -1,7 +1,9 @@
 # Chatwave-app
 
-for backend npm run server.
-for client npm start.
+for backend: npm run server.
+
+for client: npm start.
+
 and in .env
 PORT = 8080
 DEV_MODE = development
