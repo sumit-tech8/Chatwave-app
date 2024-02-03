@@ -19,7 +19,11 @@ connectDB();
 const app = express();
 
 //middelwares
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://deploy-chat-app.vercel.app"
+  }
+));
 app.use(express.json());
 app.use(morgan('dev'));
 // app.use(express.static(path.join(__dirname, './my-app/build')))
